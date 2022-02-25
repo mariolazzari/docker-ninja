@@ -1,15 +1,15 @@
 const express = require("express");
 const cors = require("cors");
 
-const PORT = 4000;
 const app = express();
+
 app.use(cors());
 
 app.get("/", (req, res) => {
   res.json([
     {
       id: "1",
-      title: "Book Review: The Bear & The Nightingale",
+      title: "Book Review: The Name of the Wind",
     },
     {
       id: "2",
@@ -22,6 +22,6 @@ app.get("/", (req, res) => {
   ]);
 });
 
-app.listen(PORT, () => {
-  console.log("listening for requests on port", PORT);
+app.listen(4000, () => {
+  console.log("listening for requests on port 4000");
 });
